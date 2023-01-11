@@ -16,5 +16,3 @@ const list = ingredients.map((ingredient) => {
 
   return liEl;
 })
-
-console.log(ingredientsRef);

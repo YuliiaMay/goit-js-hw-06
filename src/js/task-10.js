@@ -20,7 +20,6 @@ const createBoxes = (amount) => {
     divEl.style.width = `${30 + 10 * i}px`;
     divEl.style.background = getRandomHexColor();
     divArray.push(divEl);
-    // refs.boxes.insertAdjacentHTML('beforeend', divEl)
 	}
   return divArray;
 }

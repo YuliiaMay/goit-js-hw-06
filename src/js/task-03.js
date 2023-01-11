@@ -14,6 +14,12 @@ const images = [
 ];
 
 const galleryRef = document.querySelector('.gallery');
+  galleryRef.style.display = 'flex';
+  galleryRef.style.flexDirection = 'row';
+  galleryRef.style.justifyContent = 'center';
+  galleryRef.style.gap = '15px';
+  galleryRef.style.listStyle = 'none';
+  galleryRef.style.paddingLeft = '0px';
 
 const itemsRef = document.createElement('li');
 const imgRef = document.createElement('img');
@@ -21,24 +27,8 @@ const imgRef = document.createElement('img');
 const elements = images
   .map((image) =>
     `<li>
-        <img url="${image.url}" alt="${image.alt}">
+        <img src="${image.url}" alt="${image.alt}" width='380px' height='250px'>
     </li>`)
   .join("");
 
-  galleryRef.insertAdjacentHTML("beforeend", elements);
-  console.log(elements);
-  console.log(galleryRef);
-
-// const galleryRef = document.querySelector('.gallery');
-
-// const items = images.map((image) => {
-//   const itemsRef = document.createElement('li');
-//   const imgRef = document.createElement('img');
-//   imgRef.setAttribute('url', image.url);
-//   imgRef.setAttribute('alt', image.alt);
-  
-//   itemsRef.append(imgRef);
-//   galleryRef.append(itemsRef)
-// })
-
-// console.log(galleryRef);
+galleryRef.insertAdjacentHTML("beforeend", elements);
